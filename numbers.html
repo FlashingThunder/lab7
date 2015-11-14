@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head> <title>Lab-07</title> </head>
+
+<body>
+
+<script>
+
+var number = prompt("gimme a 4 digit number");
+//3456
+var thous_mod = number%1000;
+//456
+var thous_whole = number-thous_mod;
+//3456 - 456 = 3000
+var thous = thous_whole/1000;
+//3000/1000 = 3
+//------------------------
+
+var number_100 = thous_mod;
+//456
+var hund_mod = number_100%100;
+//456 % 100 = 56
+var hund_whole = number_100-hund_mod;
+//456 - 56 = 400
+var hund = hund_whole/100;
+//400/100 = 4
+//------------------------
+
+var number_10 = hund_mod;
+//56
+var ten_mod = number_10%10;
+//56 % 10 = 6
+var ten_whole = number_10-ten_mod;
+//56 - 6 = 50
+var ten = ten_whole/10;
+//50 / 10 = 5
+//--------------------------
+var number_1 = ten_mod;
+//
+var one_mod = number_1%1;
+//
+var one_whole = number_1-one_mod;
+//
+var one = one_whole/1;
+//
+//------------------------- 
+console.log(thous + " Thousands"+ "\n" + hund + " Hundreds" + "\n" + ten + " Tens" + "\n" + one + " Ones");
+
+
+
+</script>
+
+
+</body>
+
+
+</html>
